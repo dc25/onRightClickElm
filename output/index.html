@@ -8235,7 +8235,7 @@ var _user$project$Main$onRightClick = function (message) {
 };
 var _user$project$Main$Decrement = {ctor: 'Decrement'};
 var _user$project$Main$Increment = {ctor: 'Increment'};
-var _user$project$Main$svgBox = function (model) {
+var _user$project$Main$svgBox = function () {
 	var h = 40;
 	var w = 600;
 	return A2(
@@ -8329,7 +8329,7 @@ var _user$project$Main$svgBox = function (model) {
 				}),
 			_1: {ctor: '[]'}
 		});
-};
+}();
 var _user$project$Main$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
@@ -8381,7 +8381,7 @@ var _user$project$Main$view = function (model) {
 							{ctor: '[]'}),
 						_1: {
 							ctor: '::',
-							_0: _user$project$Main$svgBox(model),
+							_0: _user$project$Main$svgBox,
 							_1: {ctor: '[]'}
 						}
 					}

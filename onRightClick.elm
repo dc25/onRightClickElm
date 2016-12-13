@@ -7,7 +7,7 @@ import Svg.Attributes exposing (x, y, height, width, version, style, fontSize, d
 main =
   beginnerProgram { model = 0, view = view, update = update }
 
-svgBox model = 
+svgBox = 
     let w = 600
         h = 40
 
@@ -41,7 +41,7 @@ view model =
     [ button [ onRightClick Decrement ] [ HTML.text "click right to decrement" ]
     , div [] [ HTML.text (toString model) ] , button [ onClick Increment ] [ HTML.text "click left to increment" ]
     , div [] [ ]
-    , svgBox model
+    , svgBox 
     ]
 
 onRightClick message =
