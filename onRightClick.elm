@@ -1,8 +1,6 @@
-import Html exposing (div, button, text)
-import Html.App exposing (beginnerProgram)
+import Html exposing (beginnerProgram, div, button, text)
 import Html.Events exposing (onClick, onWithOptions)
 import Json.Decode as Json
-
 
 main =
   beginnerProgram { model = 0, view = view, update = update }
@@ -10,14 +8,14 @@ main =
 
 view model =
   div []
-    [ button [ onRightClick Decrement ] [ text "-" ]
+    [ button [ onRightClick Decrement ] [ text "click right to decrement" ]
     , div [] [ text (toString model) ]
-    , button [ onClick Increment ] [ text "+" ]
+    , button [ onClick Increment ] [ text "click left to increment" ]
     ]
 
 onRightClick message =
   onWithOptions
-    "oncontextmenu"
+    "contextmenu"
     { stopPropagation = True
     , preventDefault = True
     }
