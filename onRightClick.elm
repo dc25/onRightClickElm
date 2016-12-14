@@ -8,8 +8,8 @@ main =
   beginnerProgram { model = 0, view = view, update = update }
 
 svgBox = 
-    let w = 600
-        h = 40
+    let w = 700
+        h = 30
 
     in svg [ version "1.1"
            , width (toString w)
@@ -30,7 +30,7 @@ svgBox =
                        , onClick Increment
                        , onRightClick Decrement
                        ] 
-                       [ Svg.text "click left or right to decrement or increment" 
+                       [ Svg.text "SVG rectangle with text. Click left  to increment or right to decrement. " 
                        ]
               ]
            ]
